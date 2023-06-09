@@ -1,0 +1,104 @@
+{
+    "max_open_trades": 4,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "USD",
+    "available_capital": 150,
+    "dry_run": false,
+    "dry_run_wallet": 100,
+    "cancel_open_orders_on_exit": false,
+    "trading_mode": "spot",
+    "margin_mode": "",
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 10,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": true,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing":{
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "<clé_api_de_votre_exchange>",
+        "secret": "<clé_secrete_de_votre_exchange>",
+        "ccxt_config": {},
+        "ccxt_async_config": {
+            "enableRateLimit": true,
+            "rateLimit": 1000
+        },
+        "pair_whitelist": [
+        ],
+        "pair_blacklist": [
+            "AUD/.*",
+            "GST/.*",
+            "GMT/.*",
+            "RPL/.*",
+            "BUSD/.*",
+            "BNB/.*",
+            "USDC/.*",
+            "USTC/.*",
+            "EUR/.*",
+            "USDT/.*",
+            "GFT/BUSD"
+        ]
+    },
+    "pairlists": [
+        {
+            "method": "VolumePairList",
+            "number_assets": 80,
+            "sort_key": "quoteVolume",
+            "refresh_period": 1800
+        }
+    ],
+    "edge": {
+        "enabled": false,
+        "process_throttle_secs": 3600,
+        "calculate_since_number_of_days": 7,
+        "allowed_risk": 0.01,
+        "stoploss_range_min": -0.01,
+        "stoploss_range_max": -0.1,
+        "stoploss_range_step": -0.01,
+        "minimum_winrate": 0.60,
+        "minimum_expectancy": 0.20,
+        "min_trade_number": 10,
+        "max_trade_duration_minute": 1440,
+        "remove_pumps": false
+    },
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8000,
+        "verbosity": "error",
+        "enable_openapi": true,
+        "jwt_secret_key": "<écrivez_le_mot_de_passe_que_vous_voulez>",
+        "ws_token": "<écrivez_le_mot_de_passe_2_que_vous_voulez>",
+        "CORS_origins": [],
+        "username": "<votre pseudo pour FreqUI>",
+        "password": "<votre mot de passe pour FreqUI>"
+    },
+    "bot_name": "freqtrade",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    }
+}
