@@ -284,13 +284,11 @@
         "listen_port": 9500,
         "verbosity": "error",
         "enable_openapi": false,
-        "jwt_secret_key": "f6fc5e890befde7fad34c769fa1b620524f50541828175bd146c9bd17ecd6468",
-        "ws_token": "sKtDX1s9BeUVxR8LgN4LOaerCsAMsmc62Q",
-        "CORS_origins": [
-            "http://135.125.105.19:9400"
-        ],
-        "username": "moutonneux",
-        "password": "Supermouton123?"
+        "jwt_secret_key": "",
+        "ws_token": "",
+        "CORS_origins": [],
+        "username": "",
+        "password": ""
     },
     "bot_name": "freqtrade",
     "initial_state": "running",
